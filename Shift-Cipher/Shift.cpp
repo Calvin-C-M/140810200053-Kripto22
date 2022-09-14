@@ -61,9 +61,13 @@ namespace ShiftCipher {
 
         for(char ch: text) {
             if(inRangeOfAscii(ch,ASCII_CODE_LC)) { // Handling for lower case
-                ch = (((ch-ASCII_CODE_LC)-key)%26)+ASCII_CODE_LC;
+                ch -= (ASCII_CODE_LC + key);
+                ch = (ch < 0) ? ch+26 : ch; // If char is below 0, then it adds 26 to the char value
+                ch = (ch%26)+ASCII_CODE_LC;
             } else if(inRangeOfAscii(ch,ASCII_CODE_UC)) { // Handling for upper case
-                ch = (((ch-ASCII_CODE_UC)-key)%26)+ASCII_CODE_UC;
+                ch -= (ASCII_CODE_UC + key);
+                ch = (ch < 0) ? ch+26 : ch; // If char is below 0, then it adds 26 to the char value
+                ch = (ch%26)+ASCII_CODE_UC;
             }
             ans.push_back(ch);
         }
