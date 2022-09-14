@@ -1,6 +1,7 @@
 #include "Shift.cpp"
 
 int main() {
+    system("cls");
     bool running=true; // While this is true, program will keep on running
 
     while(running) {
@@ -15,23 +16,29 @@ int main() {
 
         std::string plaintext="";
         int key=1;
-        std::cout << "Text: "; std::getline(std::cin,plaintext);
-        std::cout << "Key: "; std::cin >> key;
 
         switch(pilihan) {
-            case 1: std::cout << "Encryption = " << ShiftCipher::encrypt(plaintext,key);
+            case 1: 
+                std::cout << "Text: "; std::getline(std::cin,plaintext);
+                std::cout << "Key: "; std::cin >> key;
+                std::cout << "Encryption = " << ShiftCipher::encrypt(plaintext,key) << "\n";
                 break;
                 
-            case 2: std::cout << "Decryption = " << ShiftCipher::decrypt(plaintext,key);
+            case 2: 
+                std::cout << "Text: "; std::getline(std::cin,plaintext);
+                std::cout << "Key: "; std::cin >> key;
+                std::cout << "Decryption = " << ShiftCipher::decrypt(plaintext,key) << "\n";
                 break;
 
             case 3: // Exit program
-                printf("Selamat tinggal...");
+                system("cls");
+                printf("Selamat tinggal...\n");
+                system("pause");
                 running=false;
                 break;
 
             default: // Error handling
-                printf("(X) Ada kesalahan dalam memilih, silahkan coba lagi!");
+                printf("(X) Ada kesalahan dalam memilih, silahkan coba lagi!\n");
                 system("pause");
                 break;
         }
