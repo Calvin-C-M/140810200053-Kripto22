@@ -3,3 +3,4 @@
 
 ## List Tugas
 1. [Shift-Cipher](/Shift-Cipher/)
+2. [Hill-Cipher](/Hill-Cipher/)
