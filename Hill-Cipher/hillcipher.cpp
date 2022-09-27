@@ -1,3 +1,13 @@
+/*
+
+Judul       : Hill Cipher
+Nama        : Calvin Calfi Montolalu
+NPM         : 140810200053
+Kelas       : A
+Deskripsi   : Program untuk implementasi hill cipher
+
+*/
+
 #include <iostream>
 #include<bits/stdc++.h>
 using namespace std ;
