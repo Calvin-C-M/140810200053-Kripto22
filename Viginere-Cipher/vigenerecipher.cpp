@@ -91,9 +91,20 @@ std::vector<std::string> split(std::string text, char del) {
     return arr;
 }
 
+void printTitle() {
+    printf("=============================\n");
+    printf("|                           |\n");
+    printf("|  Vigenere Cipher Program  |\n");
+    printf("|       By Calvin C M       |\n");
+    printf("|                           |\n");
+    printf("=============================\n");
+}
+
 int main() {
     system("cls");
+    system("color a");
     bool running=true;
+    printTitle();
 
     while(running) {
         std::string command="";
